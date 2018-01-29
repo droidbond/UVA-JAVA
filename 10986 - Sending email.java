@@ -97,26 +97,6 @@ class Main {
                         "Case #" + testCaseNumber + ": " + distance[destination]);
             }
 
-            public void getPath(Integer node) {
-
-                if (distance[node] == Long.MAX_VALUE) {
-                    out.println(-1);
-                } else {
-
-                    List<Integer> steps = new ArrayList<>();
-
-                    while (node != null) {
-                        steps.add(node);
-                        node = path[node];
-                    }
-                    Collections.reverse(steps);
-
-                    for (Integer n : steps) {
-                        out.print(n + " ");
-                    }
-                }
-            }
-
             class Edge {
                 Integer destination;
                 Integer weight;
